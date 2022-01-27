@@ -11,19 +11,19 @@ const output = {
 
 const users = {
 	id: ["jjp011211", "기모찌", "팀장님"],
-	pw: ["1234", "12345", "123456"],
+	psword: ["1234", "12345", "123456"],
 };
 
 const process = {
 	login: (req, res) => {
-		const id = req.body.id
-			pw = req.body.pw;
+		const id = req.body.id,
+			psword = req.body.psword;
 		
 		if (users.id.includes(id)) {
-			const idx = users.id.index0f(id);
-			if (users.pw[idx] === pw) {
+			const idx = users.id.indexOf(id);
+			if (users.psword[idx] === psword) {
 				return res.json({
-				success: true,
+					success: true,
 				});
 			}
 		}
